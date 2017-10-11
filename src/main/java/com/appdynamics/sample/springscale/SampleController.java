@@ -19,7 +19,7 @@ public class SampleController {
     @ResponseBody
     String home() throws InterruptedException {
         Map<String, String> env = System.getenv();
-        if(timeout == 2){
+        if(timeout <= 2){
             sleep(10000);
         }
         return "Response!";
