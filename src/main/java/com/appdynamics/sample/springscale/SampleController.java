@@ -13,7 +13,7 @@ import static java.lang.Thread.sleep;
 @Controller
 @EnableAutoConfiguration
 public class SampleController {
-    static int timeout = 4;
+    static int timeout;
 
     @RequestMapping("/")
     @ResponseBody
