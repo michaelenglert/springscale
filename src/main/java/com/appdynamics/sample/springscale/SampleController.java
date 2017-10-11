@@ -13,7 +13,7 @@ import static java.lang.Thread.sleep;
 @Controller
 @EnableAutoConfiguration
 public class SampleController {
-    static int timeout;
+    static int timeout = 4;
 
     @RequestMapping("/")
     @ResponseBody
@@ -26,8 +26,8 @@ public class SampleController {
     }
 
     public static void main(String[] args) throws Exception {
+        Random rnd = new Random();
+        timeout = rnd.nextInt(5) + 1;
         SpringApplication.run(SampleController.class, args);
-        Random rnd = null;
-        timeout =  rnd.nextInt(5) + 1;
     }
 }
